@@ -1,75 +1,8 @@
-const foods = [
-    {
-        image: 'img/butterlmilkPancakes.jpg',
-        type: 'breakfast',
-        title: 'Butterlmilk Pancakes',
-        price: '$15.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cum eius est.'
-    },
-    {
-        image: 'img/dinnerDouble.jpg',
-        type: 'lunch',
-        title: 'Dinner Double',
-        price: '$13.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-    },
-    {
-        image: 'img/godzillaMilkshacke.jpg',
-        type: 'shake',
-        title: 'Godzilla Milkshacke',
-        price: '$6.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cum eius est, exercitationem laboriosam '
-    },
-    {
-        image: 'img/mangoMilkshake.jpg',
-        type: 'shake',
-        title: 'Mango Milkshake',
-        price: '$13.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cum eius est.'
-    },
-    {
-        image: 'img/baconOverflow.png',
-        type: 'lunch',
-        title: 'Bacon Overflow',
-        price: '$8.99',
-        description: '\'Lorem ipsum dolor sit amet.'
-    },
-    {
-        image: 'img/countryDelight.jpg',
-        type: 'breakfast',
-        title: 'Country Delight',
-        price: '$20.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit'
-    },
-    {
-        image: 'img/oreoDream.jpg',
-        type: 'breakfast',
-        title: 'Oreo Dream',
-        price: '$18.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cum eius est.'
-    },
-    {
-        image: 'img/americanClassic.jpg',
-        type: 'lunch',
-        title: 'American Classic',
-        price: '$12.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-    },
-    {
-        image: 'img/greenTea.jpg',
-        type: 'breakfast',
-        title: 'Green Tea',
-        price: '$2.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-    },
-    {
-        image: 'img/coldCereal.jpg',
-        type: 'breakfast',
-        title: 'Cold Cereal',
-        price: '$8.99',
-        description: '\'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cum eius est.'
-    },
-]
+async function getFoods() {
+    let response = await fetch('foods.json'),
+        foods = await response.json();
+    return foods;
+}
 
 let ulItems = document.querySelector('#items');
 
@@ -106,34 +39,41 @@ function chooseItems(items) {
     }
 }
 
-
 let chooseAll = document.querySelector(".all");
 let chooseBreakfast = document.querySelector(".breakfast");
 let chooseLunch = document.querySelector(".lunch");
 let chooseShake = document.querySelector(".shake");
 
 chooseAll.addEventListener('click', allItems);
-function allItems() {
+
+async function allItems() {
     ulItems.innerHTML = '';
+    let foods = await getFoods();
+
     chooseItems(foods);
 }
 
-chooseBreakfast.addEventListener('click', () => {
+chooseBreakfast.addEventListener('click', async () => {
     ulItems.innerHTML = '';
+
+    let foods = await getFoods();
     let items = foods.filter(item => item.type === 'breakfast');
     chooseItems(items);
 });
 
-chooseLunch.addEventListener('click', () => {
+chooseLunch.addEventListener('click', async () => {
     ulItems.innerHTML = '';
+
+    let foods = await getFoods();
     let items = foods.filter(item => item.type === 'lunch');
     chooseItems(items);
 });
 
 chooseShake.addEventListener('click', shake)
 
-function shake() {
+async function shake() {
     ulItems.innerHTML = '';
+    let foods = await getFoods();
     let items = foods.filter(item => item.type === 'shake');
     chooseItems(items);
 }
