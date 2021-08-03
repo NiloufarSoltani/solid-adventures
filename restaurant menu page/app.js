@@ -78,7 +78,7 @@ async function shake() {
     chooseItems(items);
 }
 
-window.addEventListener('DOMContentLoaded', allItems)
+window.addEventListener('DOMContentLoaded', allItems);
 
 
 
