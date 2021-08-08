@@ -23,6 +23,7 @@ img{
 }
 #container{
     padding: 0 0 0 20px;
+    color: darkslategray;
 }
 h1, h3{
     margin: 10px 0;
