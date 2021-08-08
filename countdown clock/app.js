@@ -38,19 +38,19 @@ function mineHourMinSec() {
 showCounter.innerHTML = `
 <div class="content">
     <strong id='day'>0</strong>
-    <span>Days</span>
+    <small>Days</small>
 </div>
 <div class="content">
     <strong id='hour'>00</strong>
-    <span>Hrs</span>
+    <small>Hrs</small>
 </div>
 <div class="content">
     <strong id='minute'>00</strong>
-    <span>Mins</span>
+    <small>Mins</small>
 </div>
 <div class="content">
     <strong id='second'>00</strong>
-    <span>Secs</span>
+    <small>Secs</small>
 </div>
    `;
 function counter(day, hour, min, second) {
