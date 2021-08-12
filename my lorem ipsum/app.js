@@ -8,7 +8,7 @@ let paragraph = document.querySelector('#paragraphs');
 confirmNumber.addEventListener('click', function () {
     if (waiting) return;
     waiting = true;
-    loremApiUrl = `http://hipsum.co/api/?type=hipster-centric&paras=${number.value}`;
+    loremApiUrl = `https://hipsum.co/api/?type=hipster-centric&paras=${number.value}`;
     fetch(loremApiUrl)
         .then(
             response => response.json()
