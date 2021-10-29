@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ebedef;
+    height: 100vh;
+}
+#container{
+    box-shadow: 1px 1px 10px gray;
+    background: #fff;
+    width: 60%;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+.btn {
+    border: none;
+    background: none;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+}
