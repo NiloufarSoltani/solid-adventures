@@ -19,8 +19,15 @@ body{
     border-radius: 4px;
     text-align: center;
 }
+#notification{
+    height: 27px;
+    border-radius: 4px;
+    line-height: 27px;
+    font-size: 13px;
+}
 #title{
-    margin: 10px 0;
+    margin: 20px 0;
+    font-size: 30px;
 }
 #action{
     display: flex;
