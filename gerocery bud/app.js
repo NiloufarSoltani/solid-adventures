@@ -3,6 +3,7 @@ let addBtn = document.querySelector('#add-btn');
 let changeBtn = document.querySelector('#edit-btn');
 let container = document.querySelector('#item-container');
 let clearItems = document.querySelector('#clear-items');
+let notification = document.getElementById('notification');
 let itemList = localStorage.length ? localStorage.getItem('myList').split(',') : [];
 
 const addItem = function (item) {
@@ -14,6 +15,7 @@ const addItem = function (item) {
     itemList.push(item);
     // localStorage.setItem(itemList.indexOf(item), item);
     initial.value = '';
+    showNotification('A new item added', 'danger')
     render();
 }
 
@@ -69,6 +71,21 @@ function createItem(initialItem, index) {
     buttonBox.append(editBtn, deleteBtn);
     item.append(buttonBox);
     container.append(item);
+}
+
+function showNotification(message, type){
+
+    let show = setInterval(function (){
+        if(type == danger){
+            notification.style.backgroundColor = 'pink';
+            notification.style.borderColor = 'red';
+        }else {
+            notification.style.backgroundColor = 'lightGreen';
+            notification.style.borderColor = 'green';
+        }
+        notification.innerText = message;
+    })
+    clearInterval(show)
 }
 
 function clearAll() {
