@@ -8,7 +8,7 @@ let itemList = localStorage.length ? localStorage.getItem('myList').split(',') :
 
 const addItem = function (item) {
     if (!item) {
-        alert('Item name is required!');
+        showNotification('Please Enter a value!', 'danger');
         return;
     };
 
@@ -20,10 +20,11 @@ const addItem = function (item) {
 }
 
 const editItem = function (itemIndex, newValue) {
-    if (newValue) {
+    if (newValue !== '') {
         itemList[itemIndex] = newValue;
     } else {
-        alert('Item name is required!')
+        showNotification('An item can not be empty, enter a value!', 'danger');
+        return;
     }
 
     addBtn.style.display = 'inline';
