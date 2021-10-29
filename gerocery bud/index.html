@@ -12,11 +12,13 @@
 
 <body>
 <card id="container">
-    <h1>Grocery Bud</h1>
+    <h1 id="title">Grocery Bud</h1>
     <form>
-        <input type="text" id="initial-goods" placeholder="e.g. eggs">
-        <button type="button" id="add-btn">Add Item</button>
-        <button type="button" id="edit-btn" style="display: none">Edit Item</button>
+        <div id="action">
+            <input type="text" id="initial-goods" placeholder="e.g. eggs">
+            <button type="button" id="add-btn">Submit</button>
+            <button type="button" id="edit-btn" style="display: none">Edit</button>
+        </div>
         <ul id="item-container"></ul>
         <button type="button" id="clear-items" class="btn">Clear Items</button>
     </form>

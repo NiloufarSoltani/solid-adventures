@@ -19,9 +19,11 @@ const addItem = function (item) {
 
 const editItem = function (itemIndex, newValue) {
     // localStorage.setItem(itemIndex, newValue);
-    itemList[itemIndex] = newValue;
+    if(newValue){
+        itemList[itemIndex] = newValue;
+    } else {alert('Item name is required!')}
 
-    addBtn.style.display = 'block';
+    addBtn.style.display = 'inline';
     changeBtn.style.display = 'none';
     initial.value = '';
     initial.removeAttribute('data-id');
@@ -39,6 +41,9 @@ function createItem(initialItem, index) {
     item = document.createElement('li');
     item.className = 'item';
     item.innerText = initialItem;
+
+    let buttonBox = document.createElement('div');
+    buttonBox.className = 'buttonBox';
 
     let deleteBtn = document.createElement('button');
     deleteBtn.className = 'deleteItem';
@@ -58,11 +63,11 @@ function createItem(initialItem, index) {
         initial.focus();
 
         addBtn.style.display = 'none';
-        changeBtn.style.display = 'block';
+        changeBtn.style.display = 'inline';
     });
 
-    item.append(editBtn, deleteBtn);
-
+    buttonBox.append(editBtn, deleteBtn);
+    item.append(buttonBox);
     container.append(item);
 }
 
