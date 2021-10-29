@@ -4,7 +4,7 @@ let changeBtn = document.querySelector('#edit-btn');
 let container = document.querySelector('#item-container');
 let clearItems = document.querySelector('#clear-items');
 let notification = document.getElementById('notification');
-let itemList = localStorage.length ? localStorage.getItem('myList').split(',') : [];
+let itemList = localStorage.myList.length ? localStorage.getItem('myList').split(',') : [];
 
 const addItem = function (item) {
     if (!item) {
