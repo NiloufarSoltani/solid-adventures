@@ -1,0 +1,42 @@
+#container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#image-box{
+    border: 1px solid;
+    width: 599px;
+    height: 348px;
+    overflow: hidden;
+}
+#images{
+    display: flex;
+    flex-direction: row;
+    transition: 0.7s all;
+}
+img {
+    height: 350px;
+    width: 600px;
+    position: relative;
+}
+#next-btn , #prev-btn{
+    margin: 30px 10px;
+    padding: 10px;
+    font-family: monospace;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid mediumslateblue;
+    color: mediumslateblue;
+    border-radius: 6px;
+}
+/*#image-box:before{*/
+/*    content: 'wsxwsws';*/
+/*    position: absolute;*/
+/*    right: 100px;*/
+/*    background-color: red;*/
+/*    display: block;*/
+/*    width: 100px;*/
+/*    height: 101px;*/
+/*}*/
