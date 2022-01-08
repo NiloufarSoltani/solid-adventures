@@ -101,6 +101,9 @@ imageBright.className = 'image-bright';
 let imageStep = document.createElement('div');
 imageStep.className = 'image-step';
 
+
+
+
 imageCover.append(imageDes, imageBright, imageStep)
 imageBox.append(imageCover);
 
@@ -108,12 +111,25 @@ imageBox.append(imageCover);
 function makeImage(number) {
     let image = images.filter((image) => image.id === number);
     imageBox.style.backgroundImage = `url(${image[0]['src']})`;
-    images.forEach(()=> imageStep.innerHTML=`<i class="far fa-circle"></i>`)
     imageBright.style.backgroundImage = `url(${image[0]['src']})`;
     imageDes.innerHTML = `
         <div class='title'>${image[0]['title']}</div>
         <div class='description'>${image[0]['description']}</div>
     `;
+    imageStep.innerHTML='';
+    function createCircle(value){
+        let circleIcon = document.createElement('i');
+        circleIcon.className = `far fa-circle id-${value}`;
+        imageStep.appendChild(circleIcon);
+        if (value==number){circleIcon.style.fontWeight = 600};
+        circleIcon.addEventListener('click',function (){
+            makeImage(value)
+        })
+    }
+    images.forEach((value)=> {
+        let id = Object.values(value)[Object.keys(value).indexOf('id')];
+        createCircle(id);
+    });
 }
 
 let counter = document.getElementById('counter');
