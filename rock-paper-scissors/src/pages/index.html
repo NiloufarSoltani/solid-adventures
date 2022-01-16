@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 <div class="container">
@@ -15,7 +15,7 @@
             <div id="user-score"></div>
         </div>
         <div id="tie-wrap">
-            <div>Ties</div>
+            <div id="tie-title">Ties</div>
             <div id="tie-count">0</div>
         </div>
         <div id="comp-score-wrap">
@@ -35,9 +35,9 @@
                 <div id="hand-scissors"></div>
             </div>
         </div>
-        <div id="">
-            <div id="result"></div>
+        <div id="temp-result">
             <div id="user-choise"></div>
+            <div id="result"></div>
             <div id="comp-choise"></div>
         </div>
         <div class="icons comp-icon">
@@ -52,22 +52,9 @@
             </div>
         </div>
     </div>
-    <button onclick=restart()>
-        <i class="fas fa-redo-alt"></i>
-    </button>
 </div>
 
 
-<!-- Modal -->
-<!--<div id="modal">-->
-<!--    <div id="modal-content">-->
-<!--        <span class="close">&times;</span>-->
-<!--        <p id="final-result"></p>-->
-<!--        <button onclick=restart()>-->
-<!--            <i class="fas fa-redo-alt"></i>-->
-<!--        </button>-->
-<!--    </div>-->
-<!--</div>-->
 </body>
-<script src="app.js"></script>
+<script src="../scripts/app.js"></script>
 </html>
