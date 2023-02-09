@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -77,84 +76,4 @@ body {
 
 .question .content.active {
     display: block;
-=======
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, white, #e1e6ee);
-}
-
-.page-title {
-    font-family: 'Dancing Script', cursive;
-    color: goldenrod;
-    font-size: 3em;
-    margin-bottom: 30px;
-}
-
-#questions {
-    list-style: none;
-    width: 100vw;
-}
-
-.question {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px 20px;
-    font-size: 1em;
-    width: 40%;
-    margin: 20px auto;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-}
-
-.question .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.question .title {
-    letter-spacing: 1px;
-    font-weight: bold;
-    word-spacing: 2px;
-}
-
-.question .btn {
-    border: solid goldenrod 2px;
-    border-radius: 4px;
-    padding: 0 4px;
-    background-color: transparent;
-    color: goldenrod;
-    font-size: 1em;
-    cursor: pointer;
-    transition: all .2s;
-}
-
-.question .btn:hover {
-    background-color: goldenrod;
-    color: white;
-}
-
-.question .content {
-    display: none;
-    margin-top: 15px;
-    padding: 15px 0 5px;
-    border-top: solid 1px goldenrod;
-    letter-spacing: 1px;
-    line-height: 1.4em;
-}
-
-.question .content.active {
-    display: block;
->>>>>>> 2ac06a8 (Change project list UI)
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let input = document.getElementsByClassName('switch');
 let video = document.querySelector('video');
 
@@ -10,17 +9,4 @@ function playPause(){
         styleElem.innerHTML = ".toggle:after {left: 28px;}";
         video.pause();
     }
-=======
-let input = document.getElementsByClassName('switch');
-let video = document.querySelector('video');
-
-function playPause(){
-    if(video.paused){
-        video.play();
-    } else{
-        let styleElem = document.head.appendChild(document.createElement("style"));
-        styleElem.innerHTML = ".toggle:after {left: 28px;}";
-        video.pause();
-    }
->>>>>>> 2ac06a8 (Change project list UI)
 }
